@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5nkd6intp5wp"]
+
+[ext_resource type="Script" path="res://scripts/levels/Grid.cs" id="1_4phim"]
+
+[node name="Grid" type="Node2D"]
+script = ExtResource("1_4phim")

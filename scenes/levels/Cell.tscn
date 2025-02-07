@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1tx7731tkoq8"]
+
+[ext_resource type="Script" path="res://scripts/levels/Cell.cs" id="1_xmltd"]
+
+[node name="Cell" type="Sprite2D"]
+script = ExtResource("1_xmltd")
