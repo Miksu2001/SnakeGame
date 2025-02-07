@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
-public partial class Cell : Sprite2D
+namespace SnakeGame
 {
+    public partial class Cell : Sprite2D
+    {
+    }
 }

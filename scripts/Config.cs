@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
-public partial class Config
+namespace SnakeGame
 {
+    public partial class Config
+    {
+    }
 }

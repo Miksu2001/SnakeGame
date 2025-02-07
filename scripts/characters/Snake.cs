@@ -1,6 +1,9 @@
 using Godot;
 using System;
 
-public partial class Snake : Node2D
+namespace SnakeGame
 {
+    public partial class Snake : Node2D
+    {
+    }
 }
