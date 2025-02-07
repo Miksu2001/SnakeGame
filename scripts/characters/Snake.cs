@@ -5,6 +5,12 @@ namespace SnakeGame
 {
     public partial class Snake : Node2D
     {
+        [Export] private Sprite2D _head = null;
+
+
+
+
+
         public enum Direction
         {
             NONE,
@@ -24,6 +30,15 @@ namespace SnakeGame
 
         public override void _Process(double delta)
         {
+            Direction direction;
+            bool isTryingToTurn;
+
+            direction = ReadInput(out isTryingToTurn);
+
+            if (isTryingToTurn)
+            {
+                RotateHead(direction);
+            }
         }
 
 
@@ -63,6 +78,26 @@ namespace SnakeGame
             }
 
             return direction;
+        }
+
+        /// <summary>
+        /// Rotate the head of the snake to the specified direction.
+        /// </summary>
+        /// <param name="direction">The direction the player is trying to head to.</param>
+        private void RotateHead(Direction direction)
+        {
+            int rotation;
+
+            switch (direction)
+            {
+                case Direction.UP: rotation = 0; break;
+                case Direction.RIGHT: rotation = 90; break;
+                case Direction.DOWN: rotation = 180; break;
+                case Direction.LEFT: rotation = 270; break;
+                default: rotation = 0; break;
+            }
+
+            _head.RotationDegrees = rotation;
         }
     }
 }

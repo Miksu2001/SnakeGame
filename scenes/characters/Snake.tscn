@@ -3,8 +3,9 @@
 [ext_resource type="Script" path="res://scripts/characters/Snake.cs" id="1_0mhp7"]
 [ext_resource type="Texture2D" uid="uid://db0ympkwynfl7" path="res://art/snake.png" id="2_1dn6i"]
 
-[node name="Snake" type="Node2D"]
+[node name="Snake" type="Node2D" node_paths=PackedStringArray("_head")]
 script = ExtResource("1_0mhp7")
+_head = NodePath("Head")
 
 [node name="Head" type="Sprite2D" parent="."]
 texture = ExtResource("2_1dn6i")
